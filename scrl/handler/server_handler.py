@@ -20,10 +20,13 @@ handler_config = SimpleNamespace(
     RESPONSE_SIGNAL=0,
     QUERY_SIGNAL=1,
 )
+
 client = OpenAI(
-    api_key="sk-xxx",
-    base_url="xxxx"
+    api_key="DataPro/5eb27606ab01440e968401bdf19311a6",
+    base_url="https://andesgpt-gateway-cn.heytapmobi.com/converter/openai/v1",
+    MODEL = "gpt-4o"
 )
+
 query_save_path_dir = os.path.dirname(config["query_save_path"])
 if not os.path.exists(query_save_path_dir):
     print(f"query_save_path_dir {query_save_path_dir} not exists, create it")
